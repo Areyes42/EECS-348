@@ -1,0 +1,70 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+	<style>
+		#text {
+			border-style: solid;
+		}
+	</style>
+
+	<script>
+		function para_changer() {
+			let r = document.getElementById("r").value;
+			let g = document.getElementById("g").value;
+			let b = document.getElementById("b").value;
+			let r_border = document.getElementById("rb").value;
+			let g_border = document.getElementById("gb").value;
+			let b_border = document.getElementById("bb").value;
+			let width = document.getElementById("w").value;
+			let text = document.getElementById("text");
+
+			text.style.backgroundColor = `rgb(${r},${g},${b})`;
+			text.style.borderColor = `rgb(${r_border},${g_border},${b_border})`;
+			text.style.borderWidth = width;
+		}
+	</script>
+</head>
+
+<body>
+	<div>
+		<h1>EECS 348 Lab 7 Practice 2</h1>
+		
+		<div id="text">Paragraph to be altered.</div>
+		
+		<br>
+		
+		<table style="border-spacing: 6pt;">
+            <tr>
+				<th>Border Red (0 - 255):</th>
+				<th><input type="text" id="rb"></th>
+			</tr><tr>
+				<th>Border Green (0 - 255):</th>
+				<th><input type="text" id="gb"></th>
+			</tr><tr>
+				<th>Border Blue (0 - 255):</th>
+				<th><input type="text" id="bb"></th>
+			</tr><tr>
+				<th>Border Width:</th>
+				<th><input type="text" id="w"></th>
+			</tr><tr>
+				<th>Background Red (0 - 255):</th>
+				<th><input type="text" id="r"></th>
+			</tr><tr>
+				<th>Background Green (0 - 255):</th>
+				<th><input type="text" id="g"></th>
+			</tr><tr>
+				<th>Background Blue (0 - 255):</th>
+				<th><input type="text" id="b"></th>
+			</tr>
+		</table>
+		
+		<br>
+		
+		<button onclick="para_changer()">Change the color!</button> <br>
+		
+	</div>
+</body>
+
+</html>
